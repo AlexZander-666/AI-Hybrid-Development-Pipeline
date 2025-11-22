@@ -1,0 +1,36 @@
+# Security: Private keys and environment variables
+keys/
+*.pem
+.env
+.env.local
+
+# AI Artifacts: Warning files (ephemeral)
+.ai_artifacts/*.warning.*.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+dist/
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+
+# OS
+Thumbs.db
+desktop.ini

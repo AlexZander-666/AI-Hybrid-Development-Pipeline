@@ -1,0 +1,79 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "feature": {
+      "type": "string",
+      "pattern": "^[a-z0-9_]+$"
+    },
+    "phase": {
+      "enum": ["spec", "code", "test", "model_call", "scan_warning"]
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "policy_version": {
+      "type": "string"
+    },
+    "owner": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "email": { "type": "string", "format": "email" }
+          },
+          "required": ["email"],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "github": { "type": "string", "pattern": "^[A-Za-z0-9_-]+$" }
+          },
+          "required": ["github"],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "key_id": { "type": "string" }
+          },
+          "required": ["key_id"],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "spec_hash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "commit_hash": { "type": "string", "pattern": "^[a-f0-9]{40}$" },
+    "signature": { 
+      "type": "string",
+      "description": "Base64 encoded RSA/ECDSA signature of the canonical JSON"
+    },
+    "signature_meta": {
+      "type": "object",
+      "properties": {
+        "key_id": { "type": "string" },
+        "algo": { 
+          "type": "string", 
+          "enum": ["RS256", "ES256", "NONE"],
+          "description": "NONE is allowed only in non-CI (development) environments"
+        }
+      },
+      "required": ["key_id", "algo"]
+    },
+    "trace_id": { "type": "string" },
+    "generator": { "type": "string" },
+    "metadata": { "type": "object" }
+  },
+  "required": [
+    "feature",
+    "phase",
+    "timestamp",
+    "owner",
+    "commit_hash",
+    "signature",
+    "signature_meta"
+  ],
+  "additionalProperties": true
+}

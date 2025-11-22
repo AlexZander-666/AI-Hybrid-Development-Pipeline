@@ -1,0 +1,16 @@
+{
+  "yaml": "PyYAML",
+  "PIL": "Pillow",
+  "dateutil": "python-dateutil",
+  "sklearn": "scikit-learn",
+  "cv2": "opencv-python",
+  "bs4": "beautifulsoup4",
+  "dotenv": "python-dotenv",
+  "jwt": "PyJWT",
+  "boto3": "boto3",
+  "fastapi": "fastapi",
+  "pydantic": "pydantic",
+  "requests": "requests",
+  "numpy": "numpy",
+  "pandas": "pandas"
+}
