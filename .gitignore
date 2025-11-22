@@ -20,6 +20,12 @@ build/
 dist/
 *.egg-info/
 
+# Test Coverage
+.coverage
+htmlcov/
+*.cover
+.pytest_cache/
+
 # IDE
 .vscode/
 .idea/
