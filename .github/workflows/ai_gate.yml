@@ -1,6 +1,8 @@
 name: AI Protocol Gate V3.5
 
 on:
+  push:
+    branches: [ main ]
   pull_request:
     branches: [ main ]
 
