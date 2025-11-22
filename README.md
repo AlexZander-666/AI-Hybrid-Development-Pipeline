@@ -3,6 +3,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![AI Gate](https://github.com/AlexZander-666/AI-Hybrid-Development-Pipeline/actions/workflows/ai_gate.yml/badge.svg)](https://github.com/AlexZander-666/AI-Hybrid-Development-Pipeline/actions/workflows/ai_gate.yml)
+[![GitHub release](https://img.shields.io/github/v/release/AlexZander-666/AI-Hybrid-Development-Pipeline)](https://github.com/AlexZander-666/AI-Hybrid-Development-Pipeline/releases)
 
 > **Military-grade AI development workflow with cryptographic audit trails**  
 > A production-ready framework for secure, traceable, and policy-compliant AI-assisted code generation.
